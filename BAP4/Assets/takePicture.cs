@@ -1,28 +1,98 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class takePicture : MonoBehaviour
 {
-    public bool takingScreenshot = false;
+	public bool takingScreenshot = false;
 
-    public void CaptureScreenshot()
-    {
-        StartCoroutine(TakeScreenshotAndSave());
-    }
+	public Image preview;
+	public GameObject panel;
+	private Texture2D ss;
 
-    private IEnumerator TakeScreenshotAndSave()
-    {
-        takingScreenshot = true;
-        yield return new WaitForEndOfFrame();
+	public void CaptureScreenshot()
+	{
+		StartCoroutine(TakeScreenshoAndSave());
+	}
 
-        Texture2D ss = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
-        ss.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
-        ss.Apply();
+	public void SaveScreenshot()
+	{
+		StartCoroutine(Save());
+	}
+
+
+
+
+	public void closePanel()
+	{
+		panel.GetComponent<CanvasGroup>().alpha = 0;
+		panel.GetComponent<CanvasGroup>().blocksRaycasts = false;
+
+		Destroy(ss);
+	}
+
+	private IEnumerator TakeScreenshotAndSave()
+	{
+
+		takingScreenshot = true;
+		yield return new WaitForEndOfFrame();
+
+		Texture2D ss = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
+		ss.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
+		ss.Apply();
+
+		// Save the screenshot to Gallery/Photos
+		string name = string.Format("{0}_Capture{1}_{2}.png", Application.productName, "{0}", System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss"));
+		Debug.Log("Permission result: " + NativeGallery.SaveImageToGallery(ss, Application.productName + " Captures", name));
+		takingScreenshot = false;
+	}
+
+	private IEnumerator TakeScreenshoAndSave()
+	{
+		
+
+		yield return new WaitForEndOfFrame();
+
+		ss = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
+		ss.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
+		ss.Apply();
+
+		preview.sprite = Sprite.Create(ss, new Rect(0.0f, 0.0f, ss.width, ss.height), new Vector2(0.5f, 0.5f), 100.0f);
+
+		panel.GetComponent<CanvasGroup>().alpha = 1;
+		panel.GetComponent<CanvasGroup>().blocksRaycasts = true;
+
+		//// Save the screenshot to Gallery/Photos
+		//NativeGallery.Permission permission = NativeGallery.SaveImageToGallery(ss, "GalleryTest", "Image.png", (success, path) => Debug.Log("Media save result: " + success + " " + path));
+
+		//Debug.Log("Permission result: " + permission);
+
+		//// To avoid memory leaks
+		//Destroy(ss);
+	}
+
+	private IEnumerator Save()
+	{
+
+
+		yield return new WaitForEndOfFrame();
+
+		//ss = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
+		//ss.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
+		//ss.Apply();
+
+		//preview.sprite = Sprite.Create(ss, new Rect(0.0f, 0.0f, ss.width, ss.height), new Vector2(0.5f, 0.5f), 100.0f);
+
+		//panel.GetComponent<CanvasGroup>().alpha = 1;
+		//panel.GetComponent<CanvasGroup>().blocksRaycasts = true;
 
         // Save the screenshot to Gallery/Photos
-        string name = string.Format("{0}_Capture{1}_{2}.png", Application.productName, "{0}", System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss"));
-        Debug.Log("Permission result: " + NativeGallery.SaveImageToGallery(ss, Application.productName + " Captures", name));
-        takingScreenshot = false;
+        NativeGallery.Permission permission = NativeGallery.SaveImageToGallery(ss, "GalleryTest", "Image.png", (success, path) => Debug.Log("Media save result: " + success + " " + path));
+
+        Debug.Log("Permission result: " + permission);
+
+        // To avoid memory leaks
+        
     }
 }
