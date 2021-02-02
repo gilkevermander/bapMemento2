@@ -21,6 +21,21 @@ public class takePicture : MonoBehaviour
 		StartCoroutine(Save());
 	}
 
+	public void Facebook()
+	{
+		Application.OpenURL("https://www.facebook.com/");
+	}
+
+	public void Instagram()
+	{
+		Application.OpenURL("https://www.instagram.com/");
+	}
+
+	public void Twitter()
+	{
+		Application.OpenURL("https://twitter.com/home");
+	}
+
 
 
 

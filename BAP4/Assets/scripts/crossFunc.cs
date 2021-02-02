@@ -8,6 +8,7 @@ public class crossFunc : MonoBehaviour
     private GameObject popup;
     private GameObject popupAr;
     private GameObject warning;
+    public GameObject locatieTarger;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,5 +47,14 @@ public class crossFunc : MonoBehaviour
     public void ChangeToScene()
     {
         SceneManager.LoadScene("ar");
+    }
+
+    public void Locatie()
+    {
+        var ray = Camera.main.ScreenPointToRay(new Vector2(Screen.height / 2, Screen.width / 2));
+        RaycastHit hitPoint;
+
+        if (Physics.Raycast(ray, out hitPoint, 100.0f))
+            transform.LookAt(hitPoint.point);
     }
 }
