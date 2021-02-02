@@ -234,7 +234,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a5a89851f37c042fcbdb27ce7d7cd205, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 41a3b6e1d0df84b7fbddce7b8e3d07b0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -414,16 +414,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: VOLG DE WANDELROUTE DOORHEEN KORTRIJK
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 09f176149514d4269a9a20b4be3427f3, type: 2}
-  m_sharedMaterial: {fileID: 4483678817817677217, guid: 09f176149514d4269a9a20b4be3427f3,
+  m_fontAsset: {fileID: 11400000, guid: 340048f09e0894636995900605970554, type: 2}
+  m_sharedMaterial: {fileID: 1840844471663329216, guid: 340048f09e0894636995900605970554,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4282192923
+  m_fontColor: {r: 0.105882354, g: 0.078431375, b: 0.23921569, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -548,16 +548,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: LEG JOUW BELEVINGEN VAST EN DEEL MET JE OMGEVING
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 09f176149514d4269a9a20b4be3427f3, type: 2}
-  m_sharedMaterial: {fileID: 4483678817817677217, guid: 09f176149514d4269a9a20b4be3427f3,
+  m_fontAsset: {fileID: 11400000, guid: 340048f09e0894636995900605970554, type: 2}
+  m_sharedMaterial: {fileID: 1840844471663329216, guid: 340048f09e0894636995900605970554,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4282192923
+  m_fontColor: {r: 0.105882354, g: 0.078431375, b: 0.23921569, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1201,8 +1201,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4282192923
+  m_fontColor: {r: 0.105882354, g: 0.078431375, b: 0.23921569, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1781,7 +1781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.105882354, g: 0.078431375, b: 0.23921569, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1919,7 +1919,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 319}
+  m_AnchoredPosition: {x: 0, y: 280}
   m_SizeDelta: {x: 625.1577, y: 679.1139}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1470170611
@@ -2015,8 +2015,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Kom doorheen de hele route meer te weten over de verschillende werken van
-    Dalilla Hermans
+  m_text: Deel jouw ervaring op sociale media en vergeet zeker niet #memento2021
+    te gebruiken.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d1c2ef149cdc34b4ba9ef5a45f871b91, type: 2}
   m_sharedMaterial: {fileID: 3794961289847293990, guid: d1c2ef149cdc34b4ba9ef5a45f871b91,
@@ -2026,8 +2026,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4282192923
+  m_fontColor: {r: 0.105882354, g: 0.078431375, b: 0.23921569, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2152,16 +2152,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: ZIE DE VERHALEN RONDOM JOU TOT LEVEN KOMEN
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 09f176149514d4269a9a20b4be3427f3, type: 2}
-  m_sharedMaterial: {fileID: 4483678817817677217, guid: 09f176149514d4269a9a20b4be3427f3,
+  m_fontAsset: {fileID: 11400000, guid: 340048f09e0894636995900605970554, type: 2}
+  m_sharedMaterial: {fileID: 1840844471663329216, guid: 340048f09e0894636995900605970554,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4282192923
+  m_fontColor: {r: 0.105882354, g: 0.078431375, b: 0.23921569, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2419,7 +2419,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 327fee95a959a437b94e66ac4e98a597, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 98dd548bf7db84b3798fcd572bd2cca8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2483,8 +2483,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -150.5, y: 40.99997}
-  m_SizeDelta: {x: 301, y: 82.00001}
+  m_AnchoredPosition: {x: -150.5, y: 43.359}
+  m_SizeDelta: {x: 301, y: 86.71874}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1922281970
 MonoBehaviour:
@@ -2506,7 +2506,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 75f327f857b2d43da9e2eeeb86b2fa00, type: 3}
+    m_Font: {fileID: 12800000, guid: 223bccb391c3547788c63706542472e5, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
@@ -2518,7 +2518,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Volgende
+  m_Text: VOLGENDE
 --- !u!222 &1922281971
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2594,8 +2594,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4282192923
+  m_fontColor: {r: 0.105882354, g: 0.078431375, b: 0.23921569, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

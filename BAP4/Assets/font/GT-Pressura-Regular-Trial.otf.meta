@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 54d10ba048510498a9fe8f41d7de3bff
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: GT Pressura Trial
+  fontNames:
+  - GT Pressura Trial
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 223bccb391c3547788c63706542472e5, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
