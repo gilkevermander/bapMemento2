@@ -38,6 +38,7 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnimatorStateTransitionInspector
     - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
@@ -108,93 +109,93 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11442}
-    - Class: 114
       Script: {instanceID: 11444}
     - Class: 114
       Script: {instanceID: 11446}
     - Class: 114
       Script: {instanceID: 11448}
     - Class: 114
-      Script: {instanceID: 11498}
+      Script: {instanceID: 11450}
     - Class: 114
-      Script: {instanceID: 11998}
+      Script: {instanceID: 11500}
     - Class: 114
-      Script: {instanceID: 12026}
+      Script: {instanceID: 12000}
     - Class: 114
-      Script: {instanceID: 12100}
+      Script: {instanceID: 12028}
     - Class: 114
-      Script: {instanceID: 12160}
+      Script: {instanceID: 12102}
     - Class: 114
-      Script: {instanceID: 12174}
+      Script: {instanceID: 12162}
     - Class: 114
-      Script: {instanceID: 12310}
+      Script: {instanceID: 12176}
     - Class: 114
-      Script: {instanceID: 12522}
+      Script: {instanceID: 12312}
     - Class: 114
-      Script: {instanceID: 12700}
+      Script: {instanceID: 12524}
     - Class: 114
-      Script: {instanceID: 12716}
+      Script: {instanceID: 12702}
     - Class: 114
-      Script: {instanceID: 12742}
+      Script: {instanceID: 12718}
     - Class: 114
-      Script: {instanceID: 12938}
+      Script: {instanceID: 12744}
     - Class: 114
-      Script: {instanceID: 12952}
+      Script: {instanceID: 12940}
     - Class: 114
-      Script: {instanceID: 13028}
+      Script: {instanceID: 12954}
     - Class: 114
-      Script: {instanceID: 13044}
+      Script: {instanceID: 13030}
     - Class: 114
-      Script: {instanceID: 13348}
+      Script: {instanceID: 13046}
     - Class: 114
-      Script: {instanceID: 13616}
+      Script: {instanceID: 13350}
     - Class: 114
-      Script: {instanceID: 14074}
+      Script: {instanceID: 13618}
     - Class: 114
-      Script: {instanceID: 14254}
+      Script: {instanceID: 14076}
     - Class: 114
-      Script: {instanceID: 14518}
+      Script: {instanceID: 14256}
     - Class: 114
-      Script: {instanceID: 14544}
+      Script: {instanceID: 14520}
     - Class: 114
-      Script: {instanceID: 14564}
+      Script: {instanceID: 14546}
     - Class: 114
-      Script: {instanceID: 14708}
+      Script: {instanceID: 14566}
     - Class: 114
-      Script: {instanceID: 14740}
+      Script: {instanceID: 14710}
     - Class: 114
-      Script: {instanceID: 14754}
+      Script: {instanceID: 14742}
     - Class: 114
-      Script: {instanceID: 14952}
+      Script: {instanceID: 14756}
     - Class: 114
-      Script: {instanceID: 15042}
+      Script: {instanceID: 14954}
     - Class: 114
-      Script: {instanceID: 15184}
+      Script: {instanceID: 15044}
     - Class: 114
-      Script: {instanceID: 15194}
+      Script: {instanceID: 15186}
     - Class: 114
-      Script: {instanceID: 15248}
+      Script: {instanceID: 15196}
     - Class: 114
-      Script: {instanceID: 15294}
+      Script: {instanceID: 15250}
     - Class: 114
-      Script: {instanceID: 15330}
+      Script: {instanceID: 15296}
     - Class: 114
-      Script: {instanceID: 15538}
+      Script: {instanceID: 15332}
     - Class: 114
-      Script: {instanceID: 15624}
+      Script: {instanceID: 15540}
     - Class: 114
-      Script: {instanceID: 15648}
+      Script: {instanceID: 15626}
     - Class: 114
-      Script: {instanceID: 15854}
+      Script: {instanceID: 15650}
     - Class: 114
-      Script: {instanceID: 15896}
+      Script: {instanceID: 15856}
     - Class: 114
-      Script: {instanceID: 16146}
+      Script: {instanceID: 15898}
     - Class: 114
-      Script: {instanceID: 16194}
+      Script: {instanceID: 16148}
     - Class: 114
-      Script: {instanceID: 16318}
+      Script: {instanceID: 16196}
+    - Class: 114
+      Script: {instanceID: 16320}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -203,7 +204,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 183
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
@@ -1978,7 +1983,7 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: 2ac60b8c74c9938127f2cb09cd3acd9f
+      Hash: d5960369e0252de48d4b5746865bd252
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ARTapToPlaceObject
@@ -2021,4 +2026,4 @@ ScriptsOnlyBuild:
   platform: 9
   scenePathNames:
   - Assets/Scenes/ar.unity
-  playerPath: /Users/gilkevermander/Documents/DEVINE/SEM6/BAP/build_ios/build9
+  playerPath: /Users/gilkevermander/Documents/DEVINE/SEM6/BAP/build_ios/build18
