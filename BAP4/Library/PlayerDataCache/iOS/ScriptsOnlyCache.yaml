@@ -1,43 +1,23 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - CameraHandler
-    - ChangeScene
+    - ARTapToPlaceObject
     - Mapbox.Examples.CameraBillboard
     - Mapbox.Examples.DragableDirectionWaypoint
     - Mapbox.Examples.FeatureUiMarker
-    - Mapbox.Examples.ImmediatePositionWithLocationProvider
     - Mapbox.Examples.LabelTextSetter
     - Mapbox.Examples.MakiHelper
     - Mapbox.Examples.PoiLabelTextSetter
     - Mapbox.Examples.PoiMarkerHelper
-    - Mapbox.Examples.QuadTreeCameraMovement
-    - Mapbox.Examples.RotateWithLocationProvider
-    - Mapbox.Examples.SpawnOnMap
     - Mapbox.Examples.TextMeshOutline
-    - Mapbox.Unity.Location.AngleSmoothingAverage
-    - Mapbox.Unity.Location.AngleSmoothingLowPass
-    - Mapbox.Unity.Location.AngleSmoothingNoOp
-    - Mapbox.Unity.Location.DeviceLocationProvider
-    - Mapbox.Unity.Location.DeviceLocationProviderAndroidNative
-    - Mapbox.Unity.Location.EditorLocationProviderLocationLog
-    - Mapbox.Unity.Location.LocationArrayEditorLocationProvider
-    - Mapbox.Unity.Location.LocationProviderFactory
-    - Mapbox.Unity.Location.TransformLocationProvider
-    - Mapbox.Unity.Map.AbstractMap
-    - Mapbox.Unity.Map.InitializeMapWithLocationProvider
-    - Mapbox.Unity.Map.MapVisualizer
     - Mapbox.Unity.MeshGeneration.Data.AtlasInfo
     - Mapbox.Unity.MeshGeneration.Modifiers.ModifierStack
     - Mapbox.Unity.MeshGeneration.Modifiers.PrefabModifier
     - Mapbox.Unity.MeshGeneration.Modifiers.ReplaceFeatureCollectionModifier
     - Mapbox.Unity.Utilities.DebugTools.SceneData
     - Mapbox.Unity.Utilities.DebugTools.ScenesList
-    - Mapbox.Unity.Utilities.Runnable
-    - PageSwiper
     - ScriptablePalette
-    - TouchOnMarker
-    - crossFunc
+    - arManager
     - takePicture
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -48,16 +28,27 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    Unity.XR.ARFoundation.dll:
+    - UnityEngine.XR.ARFoundation.ARCameraBackground
+    - UnityEngine.XR.ARFoundation.ARCameraManager
+    - UnityEngine.XR.ARFoundation.ARInputManager
+    - UnityEngine.XR.ARFoundation.ARRaycastManager
+    - UnityEngine.XR.ARFoundation.ARSession
+    - UnityEngine.XR.ARFoundation.ARSessionOrigin
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.SpatialTracking.dll:
+    - UnityEngine.SpatialTracking.TrackedPoseDriver
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -69,150 +60,11 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.LayoutElement
     - UnityEngine.UI.Mask
+    - UnityEngine.UI.RawImage
     - UnityEngine.UI.Text
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
     Assets/Scenes/ar.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 11440}
-    - Class: 114
-      Script: {instanceID: 12852}
-    - Class: 114
-      Script: {instanceID: 14992}
-    - Class: 114
-      Script: {instanceID: 15928}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    Assets/Scenes/kaart.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 49
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 11388}
-    - Class: 114
-      Script: {instanceID: 11390}
-    - Class: 114
-      Script: {instanceID: 11440}
-    - Class: 114
-      Script: {instanceID: 11762}
-    - Class: 114
-      Script: {instanceID: 11810}
-    - Class: 114
-      Script: {instanceID: 11952}
-    - Class: 114
-      Script: {instanceID: 12036}
-    - Class: 114
-      Script: {instanceID: 12166}
-    - Class: 114
-      Script: {instanceID: 12200}
-    - Class: 114
-      Script: {instanceID: 12446}
-    - Class: 114
-      Script: {instanceID: 12852}
-    - Class: 114
-      Script: {instanceID: 13402}
-    - Class: 114
-      Script: {instanceID: 14286}
-    - Class: 114
-      Script: {instanceID: 14292}
-    - Class: 114
-      Script: {instanceID: 14374}
-    - Class: 114
-      Script: {instanceID: 14856}
-    - Class: 114
-      Script: {instanceID: 14884}
-    - Class: 114
-      Script: {instanceID: 14932}
-    - Class: 114
-      Script: {instanceID: 14992}
-    - Class: 114
-      Script: {instanceID: 15296}
-    - Class: 114
-      Script: {instanceID: 15568}
-    - Class: 114
-      Script: {instanceID: 15588}
-    - Class: 114
-      Script: {instanceID: 15676}
-    - Class: 114
-      Script: {instanceID: 15718}
-    - Class: 114
-      Script: {instanceID: 15798}
-    - Class: 114
-      Script: {instanceID: 15928}
-    - Class: 114
-      Script: {instanceID: 16040}
-    - Class: 114
-      Script: {instanceID: 44906}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 136
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    - Class: 225
-      Script: {instanceID: 0}
-    Assets/Scenes/onboarding.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -241,9 +93,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
+    - Class: 84
       Script: {instanceID: 0}
     - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
       Script: {instanceID: 0}
     - Class: 95
       Script: {instanceID: 0}
@@ -253,78 +107,94 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
-    - Class: 111
-      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11386}
+      Script: {instanceID: 11442}
     - Class: 114
-      Script: {instanceID: 11388}
+      Script: {instanceID: 11444}
     - Class: 114
-      Script: {instanceID: 11390}
+      Script: {instanceID: 11446}
     - Class: 114
-      Script: {instanceID: 11440}
+      Script: {instanceID: 11448}
     - Class: 114
-      Script: {instanceID: 11924}
+      Script: {instanceID: 11498}
     - Class: 114
-      Script: {instanceID: 11952}
+      Script: {instanceID: 11998}
     - Class: 114
-      Script: {instanceID: 12092}
+      Script: {instanceID: 12026}
     - Class: 114
-      Script: {instanceID: 12094}
+      Script: {instanceID: 12100}
     - Class: 114
-      Script: {instanceID: 12186}
+      Script: {instanceID: 12160}
     - Class: 114
-      Script: {instanceID: 12224}
+      Script: {instanceID: 12174}
     - Class: 114
-      Script: {instanceID: 12430}
+      Script: {instanceID: 12310}
     - Class: 114
-      Script: {instanceID: 12606}
+      Script: {instanceID: 12522}
     - Class: 114
-      Script: {instanceID: 12622}
+      Script: {instanceID: 12700}
     - Class: 114
-      Script: {instanceID: 12838}
+      Script: {instanceID: 12716}
     - Class: 114
-      Script: {instanceID: 12852}
+      Script: {instanceID: 12742}
     - Class: 114
-      Script: {instanceID: 12924}
+      Script: {instanceID: 12938}
     - Class: 114
-      Script: {instanceID: 12940}
+      Script: {instanceID: 12952}
     - Class: 114
-      Script: {instanceID: 13234}
+      Script: {instanceID: 13028}
     - Class: 114
-      Script: {instanceID: 13480}
+      Script: {instanceID: 13044}
     - Class: 114
-      Script: {instanceID: 14094}
+      Script: {instanceID: 13348}
     - Class: 114
-      Script: {instanceID: 14374}
+      Script: {instanceID: 13616}
     - Class: 114
-      Script: {instanceID: 14394}
+      Script: {instanceID: 14074}
     - Class: 114
-      Script: {instanceID: 14532}
+      Script: {instanceID: 14254}
+    - Class: 114
+      Script: {instanceID: 14518}
+    - Class: 114
+      Script: {instanceID: 14544}
     - Class: 114
       Script: {instanceID: 14564}
     - Class: 114
-      Script: {instanceID: 14856}
+      Script: {instanceID: 14708}
     - Class: 114
-      Script: {instanceID: 14950}
+      Script: {instanceID: 14740}
     - Class: 114
-      Script: {instanceID: 14992}
+      Script: {instanceID: 14754}
     - Class: 114
-      Script: {instanceID: 15002}
+      Script: {instanceID: 14952}
     - Class: 114
-      Script: {instanceID: 15100}
+      Script: {instanceID: 15042}
     - Class: 114
-      Script: {instanceID: 15136}
+      Script: {instanceID: 15184}
     - Class: 114
-      Script: {instanceID: 15336}
+      Script: {instanceID: 15194}
     - Class: 114
-      Script: {instanceID: 15422}
+      Script: {instanceID: 15248}
+    - Class: 114
+      Script: {instanceID: 15294}
+    - Class: 114
+      Script: {instanceID: 15330}
+    - Class: 114
+      Script: {instanceID: 15538}
+    - Class: 114
+      Script: {instanceID: 15624}
     - Class: 114
       Script: {instanceID: 15648}
     - Class: 114
-      Script: {instanceID: 15928}
+      Script: {instanceID: 15854}
     - Class: 114
-      Script: {instanceID: 16096}
+      Script: {instanceID: 15896}
+    - Class: 114
+      Script: {instanceID: 16146}
+    - Class: 114
+      Script: {instanceID: 16194}
+    - Class: 114
+      Script: {instanceID: 16318}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -349,7 +219,9 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 225
       Script: {instanceID: 0}
-    - Class: 258
+    - Class: 328
+      Script: {instanceID: 0}
+    - Class: 329
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -370,6 +242,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: ContentSizeFitter
   - hash:
       serializedVersion: 2
       Hash: aeb62f729c52c814dec86c47dcac1471
@@ -606,7 +484,7 @@ ScriptsOnlyBuild:
     className: GameObjectModifier
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 621906e40c87282d8a612ef9662ddccb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: crossFunc
@@ -622,6 +500,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 8aa99e74aa75b757b08525f608d33b52
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: arManager
   - hash:
       serializedVersion: 2
       Hash: bc7929c5b6cab4174185754e71e4e1f1
@@ -658,12 +542,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Mapbox.Unity.Map
     className: InitializeMapWithLocationProvider
-  - hash:
-      serializedVersion: 2
-      Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: ContentSizeFitter
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -760,6 +638,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Mapbox.Examples
     className: DragableDirectionWaypoint
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.Notifications.Android.dll
+    namespaceName: Unity.Notifications.Android
+    className: AndroidReceivedNotificationMainThreadDispatcher
   - hash:
       serializedVersion: 2
       Hash: 1103fb0758976355cdf9b7d5ce9cb7e0
@@ -1116,6 +1000,12 @@ ScriptsOnlyBuild:
     className: TagModifier
   - hash:
       serializedVersion: 2
+      Hash: 3fc18d4c1d611117da98084407443300
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: NotificationSamples.Demo
+    className: InventoryItem
+  - hash:
+      serializedVersion: 2
       Hash: 138521932fe32c94be5a69c1db100e27
     assemblyName: Assembly-CSharp.dll
     namespaceName: Mapbox.Unity.Utilities.DebugTools
@@ -1152,6 +1042,18 @@ ScriptsOnlyBuild:
     className: DirectionsFactory
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Assets.SimpleAndroidNotifications
+    className: NotificationExample
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: notifications
+  - hash:
+      serializedVersion: 2
       Hash: ba6ef9e2082e09d9399eaef28d94d812
     assemblyName: Assembly-CSharp.dll
     namespaceName: Mapbox.Unity.MeshGeneration.Modifiers
@@ -1174,6 +1076,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Mapbox.Unity.MeshGeneration.Interfaces
     className: VectorLayerVisualizer
+  - hash:
+      serializedVersion: 2
+      Hash: 898642f30894d1eb7cd67ff75c9dd282
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: NotificationSamples
+    className: GameNotificationsManager
   - hash:
       serializedVersion: 2
       Hash: 290afc8da8e459e0b8dc7444bfaf5e35
@@ -1204,6 +1112,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Mapbox.Unity.Utilities
     className: OpenUrlOnButtonClick
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: NotificationSamples.Demo
+    className: NewsFeedReader
+  - hash:
+      serializedVersion: 2
+      Hash: d298af6e358343d5da1244e55030f024
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: NotificationSamples.Demo
+    className: InventoryItemData
   - hash:
       serializedVersion: 2
       Hash: a7c91ead796087612ab9b5731410c7c5
@@ -1326,6 +1246,12 @@ ScriptsOnlyBuild:
     className: AngleSmoothingNoOp
   - hash:
       serializedVersion: 2
+      Hash: 77759952d599f14522d288d82e97e004
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: NotificationSamples.Demo
+    className: BuyInventoryItem
+  - hash:
+      serializedVersion: 2
       Hash: c9a8b80298a116835b51ba1cf9284367
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1354,6 +1280,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Mapbox.Examples
     className: SpawnOnGlobeExample
+  - hash:
+      serializedVersion: 2
+      Hash: edc10418df8053d2746effc3516626f4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: NotificationSamples.Demo
+    className: PendingNotificationItem
   - hash:
       serializedVersion: 2
       Hash: 344a8c2e106a0a4e098e91a52e0af063
@@ -1438,6 +1370,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
     className: ARReferencePointManager
+  - hash:
+      serializedVersion: 2
+      Hash: e5a19874568f6119cf15a0e2dac7dc9a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: takePicture
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.Notifications.iOS.dll
+    namespaceName: Unity.Notifications.iOS
+    className: iOSNotificationsWrapper
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1692,6 +1636,12 @@ ScriptsOnlyBuild:
     className: ARKitLoaderSettings
   - hash:
       serializedVersion: 2
+      Hash: 7d616b61720e1459114cac3709e9c387
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: NotificationSamples.Demo
+    className: GameController
+  - hash:
+      serializedVersion: 2
       Hash: 859ae13d9bec32322e7310e5882754d8
     assemblyName: Assembly-CSharp.dll
     namespaceName: Mapbox.Unity.MeshGeneration.Modifiers
@@ -1920,6 +1870,12 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
+      Hash: 709687d718161d04f2ffbde3be7cb961
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: NotificationSamples.Demo
+    className: NotificationConsole
+  - hash:
+      serializedVersion: 2
       Hash: ba6ef9e2082e09d9399eaef28d94d812
     assemblyName: Assembly-CSharp.dll
     namespaceName: Mapbox.Examples
@@ -1992,6 +1948,12 @@ ScriptsOnlyBuild:
     className: Dropdown
   - hash:
       serializedVersion: 2
+      Hash: a863d08b6a80a90a26ac361be951788e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: NotificationSamples.Demo
+    className: NotificationEventItem
+  - hash:
+      serializedVersion: 2
       Hash: 748dd2a2a28da4e618912da5ac45684b
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -2014,6 +1976,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalEmitter
+  - hash:
+      serializedVersion: 2
+      Hash: 2ac60b8c74c9938127f2cb09cd3acd9f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ARTapToPlaceObject
   - hash:
       serializedVersion: 2
       Hash: f59277879f014da07d3b28b4567297bd
@@ -2050,39 +2018,7 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Mapbox.Unity.MeshGeneration.Modifiers
     className: ModifierStack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Assets.SimpleAndroidNotifications
-    className: NotificationExample
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: notifications
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Unity.Notifications.Android.dll
-    namespaceName: Unity.Notifications.Android
-    className: AndroidReceivedNotificationMainThreadDispatcher
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Unity.Notifications.iOS.dll
-    namespaceName: Unity.Notifications.iOS
-    className: iOSNotificationsWrapper
-  - hash:
-      serializedVersion: 2
-      Hash: 2ca4888710932c94383bd4f4174fa526
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: takePicture
   platform: 9
   scenePathNames:
-  - Assets/Scenes/onboarding.unity
-  - Assets/Scenes/kaart.unity
   - Assets/Scenes/ar.unity
-  playerPath: /Users/gilkevermander/Documents/DEVINE/SEM6/BAP/newcode/BAP4/builds/build5
+  playerPath: /Users/gilkevermander/Documents/DEVINE/SEM6/BAP/build_ios/build9

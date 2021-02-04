@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/kaart.unity
+- path: Assets/Scenes/ar.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

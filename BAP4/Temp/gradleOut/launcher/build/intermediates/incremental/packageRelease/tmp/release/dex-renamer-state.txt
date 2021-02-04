@@ -1,0 +1,4 @@
+#Wed Feb 03 23:37:14 CET 2021
+base.0=/Users/gilkevermander/Documents/DEVINE/SEM6/BAP/githubBap/BAP4/Temp/gradleOut/launcher/build/intermediates/dex/release/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

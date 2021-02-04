@@ -10,6 +10,7 @@ public class takePicture : MonoBehaviour
 	public Image preview;
 	public GameObject panel;
 	private Texture2D ss;
+	public Button cameraKnop;
 
 	public void CaptureScreenshot()
 	{
@@ -44,6 +45,9 @@ public class takePicture : MonoBehaviour
 		panel.GetComponent<CanvasGroup>().alpha = 0;
 		panel.GetComponent<CanvasGroup>().blocksRaycasts = false;
 
+		cameraKnop.GetComponent<CanvasGroup>().alpha = 1;
+		cameraKnop.GetComponent<CanvasGroup>().blocksRaycasts = true;
+
 		Destroy(ss);
 	}
 
@@ -65,7 +69,8 @@ public class takePicture : MonoBehaviour
 
 	private IEnumerator TakeScreenshoAndSave()
 	{
-		
+		cameraKnop.GetComponent<CanvasGroup>().alpha = 0;
+		cameraKnop.GetComponent<CanvasGroup>().blocksRaycasts = false;
 
 		yield return new WaitForEndOfFrame();
 
