@@ -49,6 +49,8 @@ public class crossFunc : MonoBehaviour
         SceneManager.LoadScene("ar");
     }
 
+    
+
     public void Locatie()
     {
         var ray = Camera.main.ScreenPointToRay(new Vector2(Screen.height / 2, Screen.width / 2));
