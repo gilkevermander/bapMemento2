@@ -1,8 +1,11 @@
 fileFormatVersion: 2
-guid: d5ae78b3d6afa42b1afe3343bb07ec9f
+guid: 29acdac2ea38145dd93d08ba34c7ef06
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -1498010087492872569
+    second: CINEMA_4D_Main
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -62,7 +65,7 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0

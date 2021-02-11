@@ -12,6 +12,12 @@ public class takePicture : MonoBehaviour
 	private Texture2D ss;
 	public Button cameraKnop;
 
+	public GameObject nav;
+
+	public GameObject subtitles;
+	public GameObject knop;
+	public GameObject cross;
+
 	public void CaptureScreenshot()
 	{
 		StartCoroutine(TakeScreenshoAndSave());
@@ -72,6 +78,18 @@ public class takePicture : MonoBehaviour
 		cameraKnop.GetComponent<CanvasGroup>().alpha = 0;
 		cameraKnop.GetComponent<CanvasGroup>().blocksRaycasts = false;
 
+		nav.GetComponent<CanvasGroup>().alpha = 0;
+		nav.GetComponent<CanvasGroup>().blocksRaycasts = false;
+
+		knop.GetComponent<CanvasGroup>().alpha = 0;
+		knop.GetComponent<CanvasGroup>().blocksRaycasts = false;
+
+		subtitles.GetComponent<CanvasGroup>().alpha = 0;
+		subtitles.GetComponent<CanvasGroup>().blocksRaycasts = false;
+
+		cross.GetComponent<CanvasGroup>().alpha = 0;
+		cross.GetComponent<CanvasGroup>().blocksRaycasts = false;
+
 		yield return new WaitForEndOfFrame();
 
 		ss = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
@@ -82,6 +100,18 @@ public class takePicture : MonoBehaviour
 
 		panel.GetComponent<CanvasGroup>().alpha = 1;
 		panel.GetComponent<CanvasGroup>().blocksRaycasts = true;
+
+		nav.GetComponent<CanvasGroup>().alpha = 1;
+		nav.GetComponent<CanvasGroup>().blocksRaycasts = true;
+
+		knop.GetComponent<CanvasGroup>().alpha = 1;
+		knop.GetComponent<CanvasGroup>().blocksRaycasts = true;
+
+		subtitles.GetComponent<CanvasGroup>().alpha = 1;
+		subtitles.GetComponent<CanvasGroup>().blocksRaycasts = true;
+
+		cross.GetComponent<CanvasGroup>().alpha = 1;
+		cross.GetComponent<CanvasGroup>().blocksRaycasts = true;
 
 		//// Save the screenshot to Gallery/Photos
 		//NativeGallery.Permission permission = NativeGallery.SaveImageToGallery(ss, "GalleryTest", "Image.png", (success, path) => Debug.Log("Media save result: " + success + " " + path));

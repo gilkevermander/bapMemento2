@@ -6,12 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ar.unity
-    guid: b4d25d98c2d76440b9ffcd52107d0830
-  - enabled: 0
     path: Assets/Scenes/onboarding.unity
     guid: 9078e22be8d534224bb78bcfa6dcbb9e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/kaart.unity
     guid: 5d05f05b45d8a41439a1ce4fc24a92ee
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scenes/ar.unity
+    guid: b4d25d98c2d76440b9ffcd52107d0830
+  - enabled: 1
+    path: Assets/Scenes/mementoInfo.unity
+    guid: 7ff04a8822df94ed88c03cfd12bf0597
+  - enabled: 1
+    path: Assets/Scenes/makersInfo.unity
+    guid: 2801f5a40382d4a8c8d705cfcd9cc2b2
+  - enabled: 1
+    path: Assets/Scenes/ambassadeursInfo.unity
+    guid: 390cb1e3f5bcd46a58078504f4aa7954
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 0963e9faa4b5d4928bb8ea5e8217c3b7,
+      type: 2}

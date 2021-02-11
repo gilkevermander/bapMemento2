@@ -27,6 +27,13 @@ public class ARTapToPlaceObject : MonoBehaviour
     public GameObject Mask;
     public GameObject subtitles;
     public GameObject uitleg;
+    public GameObject mond1;
+    public GameObject mond2;
+    public GameObject mond3;
+    public GameObject mond4;
+    public GameObject mond5;
+    public GameObject mond6;
+    public GameObject monden;
 
     public RawImage rawImage;
 
@@ -48,6 +55,9 @@ public class ARTapToPlaceObject : MonoBehaviour
 
     private bool touched;
 
+    public Light directionalLight1;
+    public Light directionalLight2;
+
     private Animator doosOpenen;
     private Animator krantMetComments;
     private Animator oprollen;
@@ -55,6 +65,24 @@ public class ARTapToPlaceObject : MonoBehaviour
     private Animator voetStappen;
     private Animator schermAnimatie;
     private Animator gevangenisAnimatie;
+
+    public Animator mond1_a;
+    public Animator mond1_an;
+
+    public Animator mond2_a;
+    public Animator mond2_an;
+
+    public Animator mond3_a;
+    public Animator mond3_an;
+
+    public Animator mond4_a;
+    public Animator mond4_an;
+
+    public Animator mond5_a;
+    public Animator mond5_an;
+
+    public Animator mond6_a;
+    public Animator mond6_an;
 
     private ARSessionOrigin arOrigin;
 
@@ -80,8 +108,8 @@ public class ARTapToPlaceObject : MonoBehaviour
         voetStappen = voet.GetComponentInChildren<Animator>();
         schermAnimatie = scherm.GetComponentInChildren<Animator>();
         gevangenisAnimatie = Gevangenis.GetComponentInChildren<Animator>();
-
         oprollen = rol.GetComponentInChildren<Animator>();
+        //mond1_an = mond1.GetComponentInChildren<Animator>();
 
         Cube = GameObject.Find("Cube");
         Cube1 = GameObject.Find("Cube_1");
@@ -95,16 +123,47 @@ public class ARTapToPlaceObject : MonoBehaviour
         voet.transform.localScale = new Vector3(0f, 0f, 0f);
         scherm.transform.localScale = new Vector3(0f, 0f, 0f);
 
+        monden.transform.localScale = new Vector3(0f, 0f, 0f);
+
         Gevangenis.transform.localScale = new Vector3(0f, 0f, 0f);
         Mask.transform.localScale = new Vector3(0f, 0f, 0f);
 
         bloed = rol.GetComponentInChildren<ParticleSystem>();
+
         //StartCoroutine(Test());
 
         rawImage.GetComponent<CanvasGroup>().alpha = 0;
         rawImage.GetComponent<CanvasGroup>().blocksRaycasts = false;
 
 
+    }
+
+    private IEnumerator Test()
+    {
+        monden.transform.localScale = new Vector3(1f, 1f, 1f);
+        //mond1.transform.position = voorbladPos;
+        directionalLight1.intensity = 0.39f;
+        directionalLight2.intensity = 1.04f;
+        directionalLight1.shadows = LightShadows.None;
+        directionalLight2.shadows = LightShadows.None;
+        yield return new WaitForSeconds(0);//7
+        mond1_a.Play("monden");
+        mond1_an.Play("monden");
+        yield return new WaitForSeconds(6);
+        mond2_a.Play("monden2");
+        mond2_an.Play("monden2");
+        yield return new WaitForSeconds(9);
+        mond3_a.Play("monden3");
+        mond3_an.Play("monden3");
+        yield return new WaitForSeconds(6);
+        mond4_a.Play("monden4");
+        mond4_an.Play("monden4");
+        yield return new WaitForSeconds(9);
+        mond5_a.Play("monden5");
+        mond5_an.Play("monden5");
+        yield return new WaitForSeconds(6);
+        mond6_a.Play("monden6");
+        mond6_an.Play("monden6");
     }
 
     public void startAR()
@@ -123,24 +182,12 @@ public class ARTapToPlaceObject : MonoBehaviour
         SceneManager.LoadScene("kaart");
     }
 
-    private IEnumerator Test()
-    {
-        gevangenisPos = new Vector3(placementPose.position.x + 1.0f, placementPose.position.y - 1.0f , placementPose.position.z);
-        Mask.transform.localScale = new Vector3(1f, 1f, 1f);
-        Mask.transform.position = gevangenisPos;
-        Gevangenis.transform.localScale = new Vector3(1f, 1f, 1f);
-        Gevangenis.transform.position = gevangenisPos;
-        gevangenisAnimatie.Play("gevangenis");
-        yield return null;
-    }
-
     void Update()
     {
         UpdatePlacementPose();
         UpdatePlacementIndicator();
-        
 
-        if (placementPoseIsValid && Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began && touched == false)
+        if (placementPoseIsValid && Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began && touched == false && glitchVideo.frame >= 178)
         {
             touched = true; //ervoorzorgen dat je maar 1 keer kan duwen
             Debug.Log(touched);
@@ -249,6 +296,34 @@ public class ARTapToPlaceObject : MonoBehaviour
         Gevangenis.transform.localScale = new Vector3(1f, 1f, 1f);
         Gevangenis.transform.position = gevangenisPos;
         gevangenisAnimatie.Play("gevangenis");
+
+        yield return new WaitForSeconds(74); //73
+        //mondenkomen op
+        monden.transform.localScale = new Vector3(1f, 1f, 1f);
+        //mond1.transform.position = voorbladPos;
+        monden.transform.position = footPos;
+        directionalLight1.intensity = 0.39f;
+        directionalLight2.intensity = 1.04f;
+        directionalLight1.shadows = LightShadows.None;
+        directionalLight2.shadows = LightShadows.None;
+        yield return new WaitForSeconds(3);//7
+        mond1_a.Play("monden");
+        mond1_an.Play("monden");
+        yield return new WaitForSeconds(6);
+        mond2_a.Play("monden2");
+        mond2_an.Play("monden2");
+        yield return new WaitForSeconds(9);
+        mond3_a.Play("monden3");
+        mond3_an.Play("monden3");
+        yield return new WaitForSeconds(6);
+        mond4_a.Play("monden4");
+        mond4_an.Play("monden4");
+        yield return new WaitForSeconds(9);
+        mond5_a.Play("monden5");
+        mond5_an.Play("monden5");
+        yield return new WaitForSeconds(6);
+        mond6_a.Play("monden6");
+        mond6_an.Play("monden6");
     }
 
     private void UpdatePlacementIndicator()
