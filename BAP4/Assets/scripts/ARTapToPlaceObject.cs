@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
+using UnityEngine.UI;
 //using UnityEngine.Experimental.XR;
 using System;
 using UnityEngine.XR.ARSubsystems;
@@ -25,6 +26,9 @@ public class ARTapToPlaceObject : MonoBehaviour
     public GameObject Gevangenis;
     public GameObject Mask;
     public GameObject subtitles;
+    public GameObject uitleg;
+
+    public RawImage rawImage;
 
     private GameObject krantjewrap;
 
@@ -33,6 +37,7 @@ public class ARTapToPlaceObject : MonoBehaviour
     public AudioSource audioBap;
 
     public VideoPlayer videoScherm;
+    public VideoPlayer glitchVideo;
 
     Renderer[] renderKranten;
 
@@ -96,7 +101,21 @@ public class ARTapToPlaceObject : MonoBehaviour
         bloed = rol.GetComponentInChildren<ParticleSystem>();
         //StartCoroutine(Test());
 
-        
+        rawImage.GetComponent<CanvasGroup>().alpha = 0;
+        rawImage.GetComponent<CanvasGroup>().blocksRaycasts = false;
+
+
+    }
+
+    public void startAR()
+    {
+        //popup moet weg gaan en raycast weg
+        uitleg.GetComponent<CanvasGroup>().alpha = 0;
+        uitleg.GetComponent<CanvasGroup>().blocksRaycasts = false;
+        //glitch video moet beginnen
+        rawImage.GetComponent<CanvasGroup>().alpha = 1;
+        rawImage.GetComponent<CanvasGroup>().blocksRaycasts = true;
+        glitchVideo.Play();
     }
 
     public void AwayFromAR()
@@ -134,8 +153,8 @@ public class ARTapToPlaceObject : MonoBehaviour
     {
         Instantiate(objectToPlace, placementPose.position, placementPose.rotation);
         //AR starten
-        //StartCoroutine(ArExpierence());
-        StartCoroutine(Test());
+        StartCoroutine(ArExpierence());
+        //StartCoroutine(Test());
     }
 
     private IEnumerator ArExpierence()
@@ -156,7 +175,7 @@ public class ARTapToPlaceObject : MonoBehaviour
         krantPos = new Vector3(placementPose.position.x + 1.0f, placementPose.position.y - 1f, placementPose.position.z);
         krantStart = new Vector3(placementPose.position.x - 1.0f, placementPose.position.y - 1.0f, placementPose.position.z);
         schermPos = new Vector3(placementPose.position.x + 2.0f, placementPose.position.y - 1.0f, placementPose.position.z);
-        gevangenisPos = new Vector3(placementPose.position.x + 1.0f, placementPose.position.y - 2.0f, placementPose.position.z);
+        gevangenisPos = new Vector3(placementPose.position.x + 1.0f, placementPose.position.y - 1.0f, placementPose.position.z);
         Instantiate(foot, footPos, placementPose.rotation);
 
         //////
@@ -221,12 +240,12 @@ public class ARTapToPlaceObject : MonoBehaviour
 
         videoScherm.Play();
         //schermen moeten verdwijnen!!!!
-        yield return new WaitForSeconds(46);
+        yield return new WaitForSeconds(51);
         scherm.transform.localScale = new Vector3(0f, 0f, 0f);
         //aantal seconden wachten!!!!
         //gevangenis
-        Mask.transform.position = gevangenisPos;
         Mask.transform.localScale = new Vector3(1f, 1f, 1f);
+        Mask.transform.position = gevangenisPos;
         Gevangenis.transform.localScale = new Vector3(1f, 1f, 1f);
         Gevangenis.transform.position = gevangenisPos;
         gevangenisAnimatie.Play("gevangenis");

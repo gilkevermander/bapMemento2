@@ -12,7 +12,7 @@ public class TouchOnMarker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        popup = GameObject.Find("Popup");
+        popup = GameObject.Find("Popup1");
         popupAr = GameObject.Find("PopupAR");
     }
 
@@ -34,7 +34,7 @@ public class TouchOnMarker : MonoBehaviour
 
                 }
 
-                if (hit.transform.name == "Marker_2(Clone)")
+                if (hit.transform.name == "Marker_1 (8)(Clone)")
                 {
                     popupAr.GetComponent<CanvasGroup>().alpha = 1;
                     popupAr.GetComponent<CanvasGroup>().blocksRaycasts = true;

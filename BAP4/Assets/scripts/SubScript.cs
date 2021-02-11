@@ -9,21 +9,30 @@ public class SubScript : MonoBehaviour
     public GameObject textBox;
     public bool subDec = true;
     public Button switchSub;
-    public Sprite sprite_on;
-    public Sprite sprite_off;
+    public GameObject BackgroundSub;
+
+    Animator toggle_an;
+
+    void Start()
+    {
+        toggle_an = switchSub.GetComponent<Animator>();
+    }
+
 
     void Update()
     {
         if (subDec == false)
         {
-            switchSub.GetComponent<Image>().sprite = sprite_on;
+            
         }
         if (subDec == true)
         {
-            switchSub.GetComponent<Image>().sprite = sprite_off;
+            
         }
 
     }
+
+    
 
     public void MyFunction()
     {
@@ -128,13 +137,16 @@ public class SubScript : MonoBehaviour
     {
         if (subDec == false)
         {
-            textBox.GetComponent<CanvasGroup>().alpha = 1;
+            toggle_an.Play("toggle_on");
+
+            BackgroundSub.GetComponent<CanvasGroup>().alpha = 1;
             subDec = true;
             Debug.Log("Terug aanzetten");
         }
         else
         {
-            textBox.GetComponent<CanvasGroup>().alpha = 0;
+            toggle_an.Play("toggle_off");
+            BackgroundSub.GetComponent<CanvasGroup>().alpha = 0;
             subDec = false;
             Debug.Log("afzetten");
         }

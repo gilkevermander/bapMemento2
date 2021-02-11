@@ -8,7 +8,7 @@ public class crossFunc : MonoBehaviour
     private GameObject popup;
     private GameObject popupAr;
     private GameObject warning;
-    public GameObject locatieTarger;
+    //public GameObject locatieTarger;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,7 @@ public class crossFunc : MonoBehaviour
     // Update is called once per frame
     public void crossOut()
     {
-        popup = GameObject.Find("Popup");
+        popup = GameObject.Find("Popup1");
         popup.GetComponent<CanvasGroup>().alpha = 0;
         popup.GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
@@ -51,12 +51,12 @@ public class crossFunc : MonoBehaviour
 
     
 
-    public void Locatie()
-    {
-        var ray = Camera.main.ScreenPointToRay(new Vector2(Screen.height / 2, Screen.width / 2));
-        RaycastHit hitPoint;
+    //public void Locatie()
+    //{
+    //    var ray = Camera.main.ScreenPointToRay(new Vector2(Screen.height / 2, Screen.width / 2));
+    //    RaycastHit hitPoint;
 
-        if (Physics.Raycast(ray, out hitPoint, 100.0f))
-            transform.LookAt(hitPoint.point);
-    }
+    //    if (Physics.Raycast(ray, out hitPoint, 100.0f))
+    //        transform.LookAt(hitPoint.point);
+    //}
 }

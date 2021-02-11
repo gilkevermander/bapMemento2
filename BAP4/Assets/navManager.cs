@@ -7,10 +7,13 @@ public class navManager : MonoBehaviour
 {
     // Start is called before the first frame update
     private List<string> sceneHistory = new List<string>();
+    private GameObject popup;
+    Scene currentScene;
 
     void Start()
     {
-        Scene currentScene = SceneManager.GetActiveScene();
+        currentScene = SceneManager.GetActiveScene();
+        popup = GameObject.Find("popup");
     }
 
     // Update is called once per frame
@@ -55,15 +58,15 @@ public class navManager : MonoBehaviour
         //    sceneHistory.RemoveAt(sceneHistory.Count - 1);
         //    SceneManager.LoadScene(sceneHistory[sceneHistory.Count - 1]);
         //}
-        //if(popup.GetComponent<CanvasGroup>().alpha == 1)
+        //if (currentScene == SceneManager.ambassadeursInfo && popup.GetComponent<CanvasGroup>().alpha == 1)
         //{
         //    popup.GetComponent<CanvasGroup>().alpha = 0;
         //    popup.GetComponent<CanvasGroup>().blocksRaycasts = false;
         //}
         //else
         //{
-        //   SceneManager.LoadScene("kaart");
+            SceneManager.LoadScene("kaart");
         //}
-        
+
     }
 }
